@@ -1,5 +1,1 @@
-module.exports.GITHUB_TOKEN = "{{ servicewatch_github_token }}"
-module.exports.GITHUB_ORG = "{{ servicewatch_github_organization }}"
 module.exports.SLACK_TOKEN = "{{ servicewatch_slack_token }}"
-module.exports.SLACK_CHANNEL = "{{ servicewatch_slack_channel }}"
-module.exports.SLACK_LOG = "{{ servicewatch_slack_log }}"

@@ -9,11 +9,11 @@
 - name: install | npm
   shell: "cd {{ servicewatch_path }} && node install.js"
 
-# - name: copy configuration
-#   template:
-#     src: templates/config.js
-#     dest: "{{ servicewatch_path }}/config.js"
-#     mode: 0644
+- name: copy configuration
+  template:
+    src: templates/config.js
+    dest: "{{ servicewatch_path }}/alerts/slack/config.js"
+    mode: 0644
 
 # - name: set cron jobs
 #   cron:
