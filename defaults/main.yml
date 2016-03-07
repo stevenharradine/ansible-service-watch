@@ -1,0 +1,5 @@
+---
+servicewatch_user: www-data
+servicewatch_install_directory: /data/www/
+servicewatch_install_name: service-watch
+servicewatch_path: "{{ servicewatch_install_directory }}{{ servicewatch_install_name }}"
