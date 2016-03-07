@@ -7,7 +7,7 @@
     force: yes
 
 - name: install | npm
-  shell: "node {{ servicewatch_path }}/install.js"
+  shell: "cd {{ servicewatch_path }} && node install.js"
 
 # - name: copy configuration
 #   template:
