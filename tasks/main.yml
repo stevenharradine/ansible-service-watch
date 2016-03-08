@@ -1,7 +1,7 @@
 ---
 - name: clone service watch | git
   git:
-    repo: "https://github.com/stevenharradine/service-watch.git"
+    repo: "https://github.com/telusdigital/service-watch.git"
     dest: "{{ servicewatch_path }}"
     update: yes
     force: yes
