@@ -1,5 +1,6 @@
 ---
 - name: clone service watch | git
+  sudo_user: "{{ servicewatch_user }}"
   git:
     repo: "https://github.com/stevenharradine/service-watch.git"
     dest: "{{ servicewatch_path }}"
@@ -7,15 +8,18 @@
     force: yes
 
 - name: install | npm
+  sudo_user: "{{ servicewatch_user }}"
   shell: "cd {{ servicewatch_path }} && node install.js"
 
 - name: copy configuration
+  sudo_user: "{{ servicewatch_user }}"
   template:
     src: templates/config.js
     dest: "{{ servicewatch_path }}/alerts/slack/config.js"
     mode: 0644
 
 # - name: set cron jobs
+#   sudo_user: "{{ servicewatch_user }}"
 #   cron:
 #     name: "cron for github mfa checker"
 #     user: "{{ servicewatch_user }}"
